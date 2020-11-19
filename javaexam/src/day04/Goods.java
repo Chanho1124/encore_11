@@ -34,6 +34,8 @@ public class Goods {
 	}
 	public void setName(String name) {
 		this.name = name;
+		this.getName();
+		
 	}
 	public int getPrice() {
 		return price;

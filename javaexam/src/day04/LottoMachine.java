@@ -1,8 +1,19 @@
-package day03;
+package day04;
 
 public class LottoMachine {
 	//속성
-	LottoBall[] balls  = new LottoBall[45];
+	LottoBall[] balls  = null;
+	
+	//생성자
+	public LottoMachine() {
+		balls = new LottoBall[45];
+		putBalls();
+	}
+	public LottoMachine(int count) {
+		balls = new LottoBall[count];
+		putBalls();
+	}
+	
 	//기능
 	//로또 볼을 넣다. 
 	public void putBalls() {
@@ -28,6 +39,9 @@ public class LottoMachine {
 		LottoBall ball=null;
 		
 		return ball;
+	}
+	public LottoBall getBall(int index) {
+		return balls[index];
 	}
 	
 	public LottoBall[] getBalls() {
